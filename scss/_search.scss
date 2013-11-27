@@ -1,0 +1,45 @@
+// Search page styles.
+
+.search-results {
+  margin-top: 45px;
+
+  .posts-list {
+    padding-top: 0;
+    &:before {
+      height: 100%;
+      top: 0;
+    }
+  }
+
+  .excerpt {
+    color: darken(white, 40%);
+    padding-left: 118px;
+    overflow: hidden;
+    height: 38px;
+    font-size: 12px;
+  }
+
+  .pagination-buttons {
+    margin: 20px 0 0 118px;
+    font-family: $font-titles;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    color: #555;
+
+    .pagination-button {
+      text-decoration: none;
+      border-bottom: none;
+      color: rgba($color-sec, 0.5);
+      &:hover { color: rgba($color-sec, 0.7); }
+      &.disabled { color: #666; }
+    }
+    .prev {
+      padding-right: 5px;
+    }
+    .next {
+      padding-left: 5px;
+    }
+  }
+}

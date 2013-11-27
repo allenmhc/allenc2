@@ -1,0 +1,47 @@
+// Header styles.
+
+#site-header {
+  @include background(linear-gradient(rgba($color-prim, 0.5) 0%, rgba($color-prim, 0.0) 100%));
+  @include box-shadow(0 0px 5px white(0.3));
+  @include textured-bg("bg-carbonfiber", 0.4);
+
+  border-bottom: 1px solid black(0.3);
+}
+
+#site-title {
+  font-family: $font-titles;
+  @include text-shadow(0 1px white(0.3));
+  text-transform: uppercase;
+
+  .name, .description {
+    font-size: 28px;
+    letter-spacing: 5px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    color: black(1);
+  }
+  .name {
+    font-weight: 400;
+    padding-right: 10px;
+  }
+  .description {
+    font-weight: 300;
+    padding-left: 10px;
+  }
+
+  .title-separator {
+    height: 24px;
+    top: 2px;
+    @include background(linear-gradient(
+      rgba($color-sec, 0) 0%,
+      rgba($color-sec, 0.7) 20%,
+      rgba($color-sec, 0.7) 80%,
+      rgba($color-sec, 0) 100%))
+  }
+}
+
+#site-title-link {
+  text-decoration: none;
+}
+

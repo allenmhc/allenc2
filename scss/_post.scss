@@ -1,0 +1,214 @@
+// Post styles.
+
+.post {
+  margin-top: 45px;
+  color: darken(white, 10%);
+  font-size: 16px;
+  @include text-shadow(0 1px lighten(black, 20%));
+  line-height: 25px;
+
+  h1 {
+    color: white(0.8);
+    font-size: 20px;
+    font-weight: 400;
+    @include letterpress-black(0.8);
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+  }
+
+  .title-separator {
+    width: 100%;
+    height: 1px;
+    position: relative;
+    top: -10px;
+    @include background(linear-gradient(left, rgba($color-prim, 0.5) 0%, rgba($color-prim, 0.5) 80%, rgba($color-prim, 0) 100%));
+  }
+
+  .post-content {
+    margin-top: -10px;
+
+    // Titles.
+    h1, h2, h3, h4, h5, h6 { margin-top: 30px; }
+    h2, h3 {
+      font-size: 18px;
+      font-weight: normal;
+      color: $color-sec;
+    }
+
+    // Footer references.
+    a.fn-ref-mark {
+      border-bottom: none;
+      padding-left: 3px;
+    }
+    sup {
+      line-height: 0;
+    }
+
+    // Images.
+    img {
+      max-width: $alpha-width - 70px;
+    }
+
+    // Captions.
+    p.wp-caption-text {
+      color: #aaa;
+      font: {
+        size: 90%;
+      }
+      margin: 0;
+      text-align: center;
+    }
+
+    // Alignment.
+    $img-margin: 15px;
+    .alignleft {
+      display: inline;
+      float: left;
+      margin-right: $img-margin;
+    }
+    .alignright {
+      display: inline;
+      float: right;
+      margin-left: $img-margin;
+    }
+    .aligncenter {
+      clear: both;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .alignleft, .alignright, .aligncenter { margin-top: $img-margin; margin-bottom: $img-margin; }
+
+    // Lists.
+    ul, ol {
+      list-style-position: outside;
+      margin: 0;
+      padding: 0 30px;
+      li { margin: 5px 0; }
+    }
+
+    // Code
+    pre, code {
+      font-family: $font-monospaced;
+      font-size: 16px;
+    }
+
+    // Quotes
+    blockquote {
+      border-left: 1px solid rgba($color-sec, 0.35);
+      margin: 0 10px 0 0;
+      padding: 0 25px;
+    }
+
+    // Metadata.
+    .metadata {
+      text-align: right;
+      .post-date {
+        color: rgba($color-sec, 0.8);
+      }
+      a {
+        color: $color-sec;
+        border-bottom: 1px solid rgba($color-sec, 0.4);
+      }
+    }
+
+    /*
+     * Plugins
+     */
+    // Syntax Highlighter.
+    .syntaxhighlighter {
+      border: 1px solid $color-prim;
+      padding: 10px 0;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      font-size: 14px !important;
+    }
+
+    // jQuery Footnotes.
+    #footnote-list {
+      color: darken(white, 30%);
+      font-size: 14px;
+      margin: 30px 0;
+      ol {
+        margin: 0;
+        padding: 0;
+        list-style-position: inside;
+        a {
+          color: darken(white, 30%);
+          padding-bottom: 1px;
+          &:last-child { border-bottom: none; }
+        }
+        li { line-height: 20px; }
+      }
+    }
+
+    // Social sharing.
+    .mr_social_sharing_wrapper {
+      margin: 2em 0 1em;
+    }
+  }
+
+  .comments {
+    margin-top: 50px;
+    padding-top: 40px;
+    position: relative;
+
+    &:before {
+      width: 100%;
+      height: 1px;
+      @include background(linear-gradient(left, white(0.6) 0%, white(0.4) 60%, white(0.0) 100%));
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.related-posts {
+  margin-top: 20px;
+
+  h3 {
+    font-weight: 400;
+    color: $color-ter;
+    font-size: 16px;
+  }
+
+  .posts-list {
+    padding: 10px 0;
+    a.post-line {
+      padding: 2px 0 2px 20px;
+      &:before {
+        top: 10px;
+        left: -4px;
+      }
+    }
+
+    &:before {
+      height: 90%;
+      top: 5%;
+      left: 0;
+    }
+  }
+}
+
+// jQuery Footnotes hover.
+body div#footnotediv {
+  @include border-radius(5px);
+  @include box-shadow(0px 1px 5px white(0.6));
+  font-size: 14px;
+  background-color: #222;
+  color: darken(white, 10%);
+  max-width: 250px;
+  padding: 10px 15px;
+  border: none;
+  line-height: 20px;
+  a {
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid darken(white, 30%);
+    color: darken(white, 10%);
+    &:last-child { border-bottom: none; }
+  }
+}

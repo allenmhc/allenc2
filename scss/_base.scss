@@ -1,0 +1,68 @@
+// Base styles.
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-regular-webfont.eot");
+  src: local("â˜º");
+  src: url("../fonts/proximanova-regular-webfont.woff") format("woff");
+  src: url("../fonts/proximanova-regular-webfont.ttf") format("truetype");
+  src: url("../fonts/proximanova-regular-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-bold-webfont.eot");
+  src: local("â˜º");
+  src: url("../fonts/proximanova-bold-webfont.woff") format("woff");
+  src: url("../fonts/proximanova-bold-webfont.ttf") format("truetype");
+  src: url("../fonts/proximanova-bold-webfont.svg") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-regularitalic-webfont.eot");
+  src: local("â˜º");
+  src: url("../fonts/proximanova-regularitalic-webfont.woff") format("woff");
+  src: url("../fonts/proximanova-regularitalic-webfont.ttf") format("truetype");
+  src: url("../fonts/proximanova-regularitalic-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-boldit-webfont.eot");
+  src: local("â˜º");
+  src: url("../fonts/proximanova-boldit-webfont.woff") format("woff");
+  src: url("../fonts/proximanova-boldit-webfont.ttf") format("truetype");
+  src: url("../fonts/proximanova-boldit-webfont.svg") format("svg");
+  font-weight: bold;
+  font-style: italic;
+}
+
+body {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: $font-default;
+  color: #eee;
+  background: black(1) url(../images/bg-waves.jpg) no-repeat fixed center center;
+
+  .prose a {
+    color: $color-prim;
+    text-decoration: none;
+    padding-bottom: 2px;
+    &:hover, &:active { color: lighten($color-prim, 10%); }
+    &:active { position: relative; top: 1px; }
+  }
+}
+
+// More for Disqus to pick up.
+a {
+  color: $color-prim;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}

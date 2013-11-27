@@ -1,0 +1,94 @@
+// Archives page styles.
+
+$archive-height: 105px;
+$gradient-color: rgba(lighten($color-archives, 20%), 0.3);
+
+.archives {
+  .histogram {
+    list-style: none;
+    margin: 0 0 50px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: $archive-height;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: $archive-height + 10px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      @include background(linear-gradient(left, $gradient-color 0%, $gradient-color 60%, rgba($color-archives, 0.0) 90%));
+      @include box-shadow(0 0 3px white(0.2));
+    }
+
+    .archive-link {
+      text-decoration: none;
+      display: block;
+      padding: 0 5px 10px;
+
+      &:hover, &:active {
+        background-color: rgba($color-archives, 0.4);
+      }
+      &:active {
+        margin: 1px 0 -1px;
+      }
+    }
+
+    .year {
+      display: inline-block;
+      height: 100%;
+      margin-right: 5px;
+      .year-inner {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .title {
+        color: white(0.7);
+        font-size: 16px;
+        letter-spacing: 2px;
+        margin-top: 10px;
+        text-align: center;
+      }
+    }
+
+    .month {
+      display: inline-block;
+      position: relative;
+      height: $archive-height;
+      width: 5px;
+    }
+
+    .histogram-bubble {
+      @include border-radius(3px);
+      position: absolute;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      display: block;
+      background-color: white(0.7);
+    }
+  }
+
+  .posts-list {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &:before {
+      height: 90%;
+      top: 5%;
+    }
+  }
+}
+
+// Category archive page.
+.archive {
+  margin-top: 25px;
+
+  .posts-list:before {
+    height: 100%;
+    top: 0;
+  }
+}

@@ -1,0 +1,58 @@
+// Article page styles.
+
+$dot-color: rgba(lighten($color-articles, 20%), 0.3);
+.articles {
+  .year-navigator {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0 60px;
+    position: relative;
+    @include clearfix();
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 38px;
+      left: 25px;
+      width: 100%;
+      height: 1px;
+      @include background(linear-gradient(left, $dot-color 0%, $dot-color 60%, rgba($color-articles, 0.0) 90%));
+      @include box-shadow(0 0 3px white(0.2));
+    }
+  }
+
+  .year {
+    float: left;
+    margin-right: 60px;
+    position: relative;
+    top: 0;
+    &:hover, &:active {
+    }
+    &:active {
+      top: 1px;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 31px;
+      left: 22px;
+      width: 5px;
+      height: 5px;
+      background-color: white(0.5);
+      @include border-radius(3px);
+      @include box-shadow(0 0 5px $color-articles);
+    }
+  }
+
+  .title-year {
+    font-family: $font-titles;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: white(0.7);
+    text-decoration: none;
+  }
+}

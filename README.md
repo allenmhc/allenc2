@@ -1,4 +1,5 @@
-allenc
-======
+# allenc2
 
-Wordpress theme
+Wordpress theme by @allenmhc
+
+Fork off of allenc.

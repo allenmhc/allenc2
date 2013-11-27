@@ -1,0 +1,30 @@
+/* Theme Name: allenc
+ * Theme URI: http://allenc.com
+ * Description: Custom theme for allenc.com
+ * Author: Allen Cheung
+ * Version: 1.0
+ *
+ * This is the allenc 1.0 theme. */
+
+@import "compass";
+@import "normalize";
+@import "config";
+@import "mixins";
+
+@import "base";
+@import "common";
+@import "layout";
+
+@import "spine";
+
+@import "header";
+@import "footer";
+@import "sidebar";
+@import "404";
+
+@import "home";
+@import "articles";
+@import "archives";
+@import "about";
+@import "search";
+@import "post";
