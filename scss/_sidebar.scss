@@ -4,7 +4,7 @@
   min-height: 600px;
 
   h3 {
-    color: white(0.5);
+    color: black(0.5);
     @include letterpress(0.5);
     font-family: $font-titles;
     display: inline-block;
@@ -105,7 +105,7 @@
       margin: 0 0 8px;
 
       a {
-        color: white(0.7);
+        color: black(0.7);
         @include transition(color 0.2s linear);
         @include letterpress-black(0.4);
         text-decoration: none;
@@ -117,7 +117,7 @@
           display: inline-block;
         }
         span {
-          color: white(0.6);
+          color: black(0.6);
           @include transition(color 0.2s linear);
           display: block;
           text-align: center;
@@ -152,7 +152,7 @@
   }
 
   #search {
-    background: white(0.2);
+    background: black(0.2);
     @include border-radius(15px);
     width: 100%;
     border: none;
@@ -184,7 +184,7 @@
   }
 
   #search-info {
-    color: white(0.8);
+    color: black(0.8);
     margin: 5px 0 0;
     padding-left: 35px;
   }

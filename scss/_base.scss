@@ -45,8 +45,9 @@ body {
   font-size: 16px;
   font-weight: normal;
   font-family: $font-default;
-  color: #eee;
-  background: black(1) url(../images/bg-waves.jpg) no-repeat fixed center center;
+  color: #222;
+  background-image: #fafafa;
+  @include background-image(linear-gradient(#fcfcfc, #fafafa));
 
   .prose a {
     color: $color-prim;
