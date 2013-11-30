@@ -104,7 +104,7 @@ function nav_link($page) {
   </a>
 </section>
 
-<section class="spine-spacer-80"></section>
+<section class="spine-spacer-40"></section>
 
 <section class="spine-section spine-dot" id="search-form">
   <?php get_search_form(); ?>

@@ -138,6 +138,39 @@
 }
 
 #beta {
+  #rss {
+    text-decoration: none;
+    color: black(0.8);
+    &:before {
+      font: 110%/1.35 zocial;
+      font-style: normal;
+      font-weight: normal;
+      content: "R";
+    }
+
+    span {
+      position: relative;
+      left: 0;
+      @include opacity(0);
+      @include transition-property(opacity left);
+      @include transition-duration(0.2s, 0.2s);
+      @include transition-timing-function(linear, linear);
+    }
+    &:hover {
+      color: rgba($color-rss, 0.8);
+      span {
+        left: 40px;
+        @include opacity(1);
+      }
+    }
+    &:active {
+      color: rgba($color-rss, 0.6);
+      top: 1px;
+    }
+  }
+}
+
+#beta {
   #search-form {
     width: 260px;
   }

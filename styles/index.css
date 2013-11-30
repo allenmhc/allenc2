@@ -1020,49 +1020,7 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* line 78, ../scss/_footer.scss */
-#rss {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
-}
-/* line 81, ../scss/_footer.scss */
-#rss:before {
-  font: 110%/1.35 zocial;
-  font-style: normal;
-  font-weight: normal;
-  content: "R";
-}
-/* line 88, ../scss/_footer.scss */
-#rss span {
-  position: relative;
-  left: 0;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition-property: opacity, left;
-  -moz-transition-property: opacity, left;
-  -o-transition-property: opacity, left;
-  transition-property: opacity left;
-  -webkit-transition-duration: 0.2s, 0.2s;
-  -moz-transition-duration: 0.2s, 0.2s;
-  -o-transition-duration: 0.2s, 0.2s;
-  transition-duration: 0.2s, 0.2s;
-  -webkit-transition-timing-function: linear, linear;
-  -moz-transition-timing-function: linear, linear;
-  -o-transition-timing-function: linear, linear;
-  transition-timing-function: linear, linear;
-}
-/* line 97, ../scss/_footer.scss */
-#rss:hover span {
-  left: 40px;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-/* line 102, ../scss/_footer.scss */
-#rss:active {
-  color: rgba(255, 127, 37, 0.8);
-}
-
-/* line 108, ../scss/_footer.scss */
+/* line 79, ../scss/_footer.scss */
 #site-footer .copyright {
   font-size: 14px;
   font-weight: 300;
@@ -1321,20 +1279,67 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 141, ../scss/_sidebar.scss */
+#beta #rss {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+/* line 144, ../scss/_sidebar.scss */
+#beta #rss:before {
+  font: 110%/1.35 zocial;
+  font-style: normal;
+  font-weight: normal;
+  content: "R";
+}
+/* line 151, ../scss/_sidebar.scss */
+#beta #rss span {
+  position: relative;
+  left: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition-property: opacity, left;
+  -moz-transition-property: opacity, left;
+  -o-transition-property: opacity, left;
+  transition-property: opacity left;
+  -webkit-transition-duration: 0.2s, 0.2s;
+  -moz-transition-duration: 0.2s, 0.2s;
+  -o-transition-duration: 0.2s, 0.2s;
+  transition-duration: 0.2s, 0.2s;
+  -webkit-transition-timing-function: linear, linear;
+  -moz-transition-timing-function: linear, linear;
+  -o-transition-timing-function: linear, linear;
+  transition-timing-function: linear, linear;
+}
+/* line 159, ../scss/_sidebar.scss */
+#beta #rss:hover {
+  color: rgba(255, 127, 37, 0.8);
+}
+/* line 161, ../scss/_sidebar.scss */
+#beta #rss:hover span {
+  left: 40px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 166, ../scss/_sidebar.scss */
+#beta #rss:active {
+  color: rgba(255, 127, 37, 0.6);
+  top: 1px;
+}
+
+/* line 174, ../scss/_sidebar.scss */
 #beta #search-form {
   width: 260px;
 }
-/* line 144, ../scss/_sidebar.scss */
+/* line 177, ../scss/_sidebar.scss */
 #beta #searchform {
   position: relative;
 }
-/* line 147, ../scss/_sidebar.scss */
+/* line 180, ../scss/_sidebar.scss */
 #beta #searchform fieldset {
   border: none;
   margin: 0;
   padding: 0;
 }
-/* line 154, ../scss/_sidebar.scss */
+/* line 187, ../scss/_sidebar.scss */
 #beta #search {
   background: rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 15px;
@@ -1358,14 +1363,14 @@ h1, h2, h3, h4, h5, h6 {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 168, ../scss/_sidebar.scss */
+/* line 201, ../scss/_sidebar.scss */
 #beta #search:focus {
   background: rgba(255, 255, 255, 0.3);
   -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 40px rgba(138, 120, 59, 0.4);
   -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 40px rgba(138, 120, 59, 0.4);
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 40px rgba(138, 120, 59, 0.4);
 }
-/* line 174, ../scss/_sidebar.scss */
+/* line 207, ../scss/_sidebar.scss */
 #beta #search-label {
   background: transparent url(../images/search.png) no-repeat top left;
   cursor: pointer;
@@ -1377,7 +1382,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   top: 5px;
 }
-/* line 186, ../scss/_sidebar.scss */
+/* line 219, ../scss/_sidebar.scss */
 #beta #search-info {
   color: rgba(0, 0, 0, 0.8);
   margin: 5px 0 0;
