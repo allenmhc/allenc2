@@ -98,6 +98,14 @@ function nav_link($page) {
 
 <section class="spine-spacer-80"></section>
 
+<section class="spine-section spine-dot">
+  <a id="rss" href="<?php bloginfo('rss2_url'); ?>">
+    <span>subscribe to rss</span>
+  </a>
+</section>
+
+<section class="spine-spacer-80"></section>
+
 <section class="spine-section spine-dot" id="search-form">
   <?php get_search_form(); ?>
   <?php if (is_search()): ?>
@@ -111,5 +119,3 @@ function nav_link($page) {
     <?php wp_reset_query(); ?>
   <?php endif; ?>
 </section>
-
-<section class="spine-spacer-100 spine-tail"></section>

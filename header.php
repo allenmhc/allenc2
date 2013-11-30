@@ -5,10 +5,6 @@
  */
 ?><!DOCTYPE html>
 
-<?php
-  global $render_time_start;
-  $render_time_start = microtime(true);
-?>
 <html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo('charset'); ?>" />

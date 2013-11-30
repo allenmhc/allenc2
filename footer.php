@@ -12,41 +12,25 @@
 
   <footer id="site-footer">
     <div class="centered-section">
-      <div id="footer-alpha">
-        <h4>@allenmhc</h4>
-        <?php $reply = $cb->users_show("screen_name=allenmhc", true); ?>
-        <img id="twitter-profile-pic" src="<?php echo $reply->profile_image_url_https; ?>"/>
-        <div id="tweets">
-          <?php $reply = $cb->search_tweets(array("q" => "from:allenmhc", "count" => 2), true); ?>
-          <?php foreach ($reply->statuses as $tweet): ?>
-          <a class="tweet" target="_blank" href="http://twitter.com/allenmhc/status/<?php echo $tweet->id_str; ?>">
-            <aside><?php echo date("l, g:ia", strtotime($tweet->created_at)); ?></aside>
-            <p><?php echo $tweet->text; ?></p>
-          </a>
-          <?php endforeach; ?>
-        </div>
-      </div>
-      <div id="footer-beta">
-        <a id="rss" href="<?php bloginfo('rss2_url'); ?>">
-          <span>subscribe to rss</span>
+      <h4>@allenmhc</h4>
+      <?php $reply = $cb->users_show("screen_name=allenmhc", true); ?>
+      <img id="twitter-profile-pic" src="<?php echo $reply->profile_image_url_https; ?>"/>
+      <div id="tweets">
+        <?php $reply = $cb->search_tweets(array("q" => "from:allenmhc", "count" => 4), true); ?>
+        <?php foreach ($reply->statuses as $tweet): ?>
+        <a class="tweet" target="_blank" href="http://twitter.com/allenmhc/status/<?php echo $tweet->id_str; ?>">
+          <aside><?php echo date("l, g:ia", strtotime($tweet->created_at)); ?></aside>
+          <p><?php echo $tweet->text; ?></p>
         </a>
-
-        <p class="copyright">
-          <span>copyright &copy;&nbsp;<?php
-            $start_year = 2011;
-            $curr_year = date('Y');
-            echo $start_year . ($start_year == $curr_year ? '' : ' - ' . $curr_year);
-          ?></span>&nbsp;
-        </p>
-
-        <p class="render-time">
-          <?php
-            global $render_time_start;
-            $render_time_end = microtime(true);
-          ?>
-          this page took gnomes <?php echo round($render_time_end - $render_time_start, 3) ?>s to crank out
-        </p>
+        <?php endforeach; ?>
       </div>
+      <p class="copyright">
+        <span>copyright &copy;&nbsp;<?php
+          $start_year = 2011;
+          $curr_year = date('Y');
+          echo $start_year . ($start_year == $curr_year ? '' : ' - ' . $curr_year);
+        ?></span>&nbsp;
+      </p>
     </div>
   </footer>
 

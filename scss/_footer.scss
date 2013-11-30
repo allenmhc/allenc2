@@ -1,39 +1,30 @@
 // Footer styles.
 
 #site-footer {
-  @include background(linear-gradient(rgba($color-prim, 0.4) 0%, rgba($color-prim, 0.2) 100%));
-  @include box-shadow(0 0px 5px white(0.3));
-  @include textured-bg("bg-darkdots", 0.6);
-
-  border-top: 1px solid black(0.3);
+  background-color: rgba($color-prim, 0.7);
+  border-top: 1px solid black(0.4);
 }
 
 #site-footer {
-  #footer-alpha {
-    h4 {
-      font-size: 16px;
-      font-weight: 300;
-      letter-spacing: 1px;
-      color: rgba($color-twitter, 0.7);
-      @include letterpress(0.2);
+  h4 {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: lighten($color-twitter, 10%);
 
-      &:before {
-        content: "T";
-        font: 90%/1 zocial;
-        font-style: normal;
-        font-weight: normal;
-        margin-right: 10px;
-      }
+    &:before {
+      content: "T";
+      font: 90%/1 zocial;
+      font-style: normal;
+      font-weight: normal;
+      margin-right: 10px;
     }
   }
 
   #twitter-profile-pic {
-    @include border-radius(5px);
-    @include box-emboss(0.7, 0.7);
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     background-color: white(0.1);
-    border: 1px solid rgba($color-ter, 0.4);
     margin-top: 15px;
     margin-right: 30px;
     width: 64px;
@@ -45,16 +36,14 @@
   #tweets {
     display: inline-block;
     margin-top: 15px;
-    width: 430px;
-    @include letterpress-black(0.4);
     position: relative;
     &:before {
       position: absolute;
       top: 0;
       left: -7px;
-      width: 1px;
-      height: 100%;
-      @include background(linear-gradient(rgba($color-sec, 0.0) 0%, rgba($color-sec, 0.4) 25%, rgba($color-sec, 0.4) 75%, rgba($color-sec, 0.0) 100%));
+      width: 2px;
+      height: 64px;
+      background-color: lighten($color-sec, 20%);
       content: "";
     }
 
@@ -74,8 +63,8 @@
 
       aside {
         font-size: 12px;
-        color: rgba($color-sec, 0.8);
-        @include letterpress(0.3);
+        font-weight: bold;
+        color: lighten($color-sec, 20%);
       }
       p {
         font-size: 14px;
@@ -89,7 +78,6 @@
 #rss {
   text-decoration: none;
   color: white(0.8);
-  @include letterpress-black(0.4);
   &:before {
     font: 110%/1.35 zocial;
     font-style: normal;
@@ -113,29 +101,16 @@
   }
   &:active {
     color: rgba($color-rss, 0.8);
-    @include letterpress(0.4);
   }
 }
 
 #site-footer {
-  #rss, .copyright, .render-time {
-    padding-left: 50px;
-  }
-
   .copyright {
-    @include text-shadow(0 1px 2px black(0.5));
     font-size: 14px;
     font-weight: 300;
     color: white(0.7);
     letter-spacing: 1px;
-    margin: 60px 0 0;
-  }
-
-  .render-time {
-    @include text-shadow(0 1px 2px black(0.5));
-    font-size: 13px;
-    color: rgba($color-sec, 0.6);
-    margin: 10px 0;
+    margin: 20px 0 30px;
   }
 }
 
