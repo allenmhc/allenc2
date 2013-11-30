@@ -19,7 +19,7 @@
         <?php $reply = $cb->search_tweets(array("q" => "from:allenmhc", "count" => 4), true); ?>
         <?php foreach ($reply->statuses as $tweet): ?>
         <a class="tweet" target="_blank" href="http://twitter.com/allenmhc/status/<?php echo $tweet->id_str; ?>">
-          <aside><?php echo date("l, g:ia", strtotime($tweet->created_at)); ?></aside>
+          <aside><?php echo date("l, g:ia", strtotime($tweet->created_at) - 8 * 60 * 60); ?></aside>
           <p><?php echo $tweet->text; ?></p>
         </a>
         <?php endforeach; ?>
