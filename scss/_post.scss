@@ -2,16 +2,15 @@
 
 .post {
   margin-top: 45px;
-  color: darken(white, 10%);
+  color: lighten(black, 20%);
   font-size: 16px;
-  @include text-shadow(0 1px lighten(black, 20%));
   line-height: 25px;
 
   h1 {
-    color: white(0.8);
+    color: black(0.8);
     font-size: 20px;
     font-weight: 400;
-    @include letterpress-black(0.8);
+    font-family: $font-titles;
     letter-spacing: 1px;
     padding-bottom: 5px;
   }
@@ -31,7 +30,8 @@
     h1, h2, h3, h4, h5, h6 { margin-top: 30px; }
     h2, h3 {
       font-size: 18px;
-      font-weight: normal;
+      font-weight: 400;
+      font-family: $font-titles;
       color: $color-sec;
     }
 

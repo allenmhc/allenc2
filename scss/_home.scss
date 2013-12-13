@@ -67,10 +67,10 @@
     .post-title {
       vertical-align: top;
       overflow: hidden;
-      color: white(0.8);
+      color: black(0.8);
       font-size: 20px;
       font-weight: 400;
-      @include letterpress-black(0.8);
+      font-family: $font-titles;
       letter-spacing: 1px;
       padding-bottom: 5px;
     }

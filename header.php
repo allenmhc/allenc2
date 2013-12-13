@@ -20,6 +20,7 @@
   <script>window.Modernizr || document.write('<script src="scripts/lib/modernizr-2.6.2.min.js">\x3C/script>')</script>
 
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400' rel='stylesheet' type='text/css'>
 
   <?php wp_head(); ?>
 </head>
