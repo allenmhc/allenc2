@@ -503,11 +503,11 @@ body {
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
   color: #222;
   background-image: #fafafa;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fcfcfc), color-stop(100%, #fafafa));
-  background-image: -webkit-linear-gradient(#fcfcfc, #fafafa);
-  background-image: -moz-linear-gradient(#fcfcfc, #fafafa);
-  background-image: -o-linear-gradient(#fcfcfc, #fafafa);
-  background-image: linear-gradient(#fcfcfc, #fafafa);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fcfcfc), color-stop(100%, #fafafa));
+  background: -webkit-linear-gradient(#fcfcfc, #fafafa);
+  background: -moz-linear-gradient(#fcfcfc, #fafafa);
+  background: -o-linear-gradient(#fcfcfc, #fafafa);
+  background: linear-gradient(#fcfcfc, #fafafa);
 }
 /* line 52, ../scss/_base.scss */
 body .prose a {
